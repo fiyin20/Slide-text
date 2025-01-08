@@ -1,173 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>slide in text</title>
-</head>
-<body>
+    <link rel="stylesheet" href="text.css" />
+  </head>
+  <body>
     <div class="site-wrap">
+      <h2>SLIDE IN ON SCROLL</h2>
 
-        <h2> SLIDE IN ON SCROLL</h2>
-  
-        <p>The devil will try his hardest to stop you in this area of renewing
-         the mind. He knows that his control over you is finished once you
-         have learned to choose right thoughts and reject wrong ones. He
-         will attempt to stop you through <img src="fi.jpg" width="300px" class="align-right slide-in"> discouragement and
-         condemnation.
-         When condemnation comes, use your "Word weapon." Quote
-         Romans 8:1, reminding Satan and yourself that you do not walk
-         after the flesh but after the Spirit. Walking after the flesh is
-         depending on yourself; walking after the Spirit is depending on
-         God. 
-       </p>
-  
       <p>
-         When you fail (which you will), that doesn't mean that you are a
-         failure. It simply means that you don't do everything right. We all
-         have to accept the fact that along with strengths we also have
-         weaknesses. Just let Christ be strong in your weaknesses; let Him
-         be your strength on your weak days.
-         I repeat: don't receive condemnation. Your total victory will come,
-         but it will take time because it will come "little by little."
-  
-      </p> 
-  <p>
-     DON'T GET DISCOURAGED
-     Why are you cast down, O my inner self? And why should you
-      moan over me and be disquieted within me? Hope in God and
-        wait expectantly for Him, for I shall yet praise Him, my Help
-      and My God. Psalm 42:5
-      Discouragement destroys hope, so naturally the devil always tries
-      to discourage us. Without hope we give up, which is what the devil
-      wants us to do. The Bible repeatedly tells us not to be discouraged
-      or dismayed.
-  </p>
-  
-  <p>
-    God knows that we will not come through to victory if we get
-   discouraged, so He<img src="3.jpg" width="300px" class="align-right slide-in">   always encourages us as we start out on a
-   project by saying to us. "Don't get discouraged." God wants us to
-   be encouraged, not discouraged.
-   When discouragement or condemnation tries to overtake you,
-   examine your thought life. What kind of thoughts have you been
-   thinking? Have they sounded something like this?
-   </p>
-  
-  <p>
-     "I'm not going to make it; this is too hard. I always fail, it has
-     always been the same, nothing ever changes. I'm sure other people
-     don't have this much trouble getting their minds renewed. I may as
-     well give up. I'm tired of trying. I pray, but it seems as if God
-     doesn't hear. <img src="2.jpg" width="300px" class="align-left slide-in" >  He probably doesn't answer my prayers because He
-     is so disappointed in the way I act."
-     If this example represents your thoughts, it is no wonder you get
-     discouraged or come under condemnation. Remember, you become
-    what you think. Think discouraging thoughts, and you'll get
-     discouraged.
-  </p>
-  
-  <p>
-    I had a rough day yesterday.  Think condemning thoughts, and you'll come under condemnation.
-    Change your thinking and be set free!
-    Instead of thinking negatively, think like this:
-    "Well, things are going a little slow; but, thank God, I'm making
-    some progress. I'm sure glad I'm on the right path that will lead me
-    to freedom.I chose wrong thinking all day long.
-    Father, forgive me, and help me to 'keep on keeping on.' I made a
-    mistake, but at least that is one mistake I won't have to make again.
-    This is a new day.
-    You love me, Lord. Your mercy is new every morning
-     </p>  
-  
-  
-      </div>
-  
-        <style>
-            html {
-              font-size: 20px;
-              background:#ffc606;
-              box-sizing:border-box;
-              font-weight:200;
-              font-family:Arial, Helvetica, sans-serif;
-             }
-            body {
-              margin:0;
-             }
-            *, *:before, *:after {
-              box-sizing:inherit;
-             }
-            h2 {
-              margin-top:0;
-             }
-            .site-wrap {
-              max-width:700px;
-              margin:100px auto ;
-              background:WHITE;
-              padding:40px;
-              text-align:justify;
-             }
-            .align-left {
-              float:left;
-              margin-right:20px;
-             } 
-  
-           .align-right {
-              float:right;
-              margin-left:20px;
-             }
-             .slide-in {
-              opacity:0;
-              transition:all .5s;
-             } 
-            .align-left.slide-in {
-              transform:translateX(-30%) scale(0.95);
-             }
-            .align-right.slide-in {
-              transform:translateX(30%) scale(0.95);
-             }
-  
-             .slide-in.active {
-              opacity:1;
-              transform:translateX(0%) scale(1);
-             }
-        </style>
-  
-        <script>
-          function debounce(func, wait = 20, immediate = true) {
-            var timeout;
-            return function() {
-              var context = this, args = arguments;
-              var later = function() {
-                  timeout = null;
-                  if (!immediate) func.apply(context, args);
-              };
-               var callNow = immediate && !timeout;
-               clearTimeout(timeout);
-               timeout = setTimeout(later, wait);
-                 if (callNow) func.apply(context, args);
-              };
-            };
-  
-       const sliderImages = document.querySelectorAll('.slide-in');
-  
-       function checkSlide(e) {
-        sliderImages.forEach(sliderImage => {
-          
-        const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height /2;
-  
-        const imageBottom = sliderImage.offsetTop + sliderImage.height;
-        const isHalfShown = slideInAt > sliderImage.offsetTop;
-        const isNotScrolledPast  = window.scrollY < imageBottom;
-        if (isHalfShown && isNotScrolledPast) {                 
-          sliderImage.classList.add('active');
-        } else {
-          sliderImage.classList.remove('active');
-        }
+        The devil will try his hardest to stop you in this area of renewing the
+        mind. He knows that his control over you is finished once you have
+        learned to choose right thoughts and reject wrong ones. He will attempt
+        to stop you through
+        <img src="fi.jpg" width="300px" class="align-right slide-in" />
+        discouragement and condemnation. When condemnation comes, use your "Word
+        weapon." Quote Romans 8:1, reminding Satan and yourself that you do not
+        walk after the flesh but after the Spirit. Walking after the flesh is
+        depending on yourself; walking after the Spirit is depending on God.
+      </p>
+
+      <p>
+        When you fail (which you will), that doesn't mean that you are a
+        failure. It simply means that you don't do everything right. We all have
+        to accept the fact that along with strengths we also have weaknesses.
+        Just let Christ be strong in your weaknesses; let Him be your strength
+        on your weak days. I repeat: don't receive condemnation. Your total
+        victory will come, but it will take time because it will come "little by
+        little."
+      </p>
+      <p>
+        DON'T GET DISCOURAGED Why are you cast down, O my inner self? And why
+        should you moan over me and be disquieted within me? Hope in God and
+        wait expectantly for Him, for I shall yet praise Him, my Help and My
+        God. Psalm 42:5 Discouragement destroys hope, so naturally the devil
+        always tries to discourage us. Without hope we give up, which is what
+        the devil wants us to do. The Bible repeatedly tells us not to be
+        discouraged or dismayed.
+      </p>
+
+      <p>
+        God knows that we will not come through to victory if we get
+        discouraged, so He<img
+          src="3.jpg"
+          width="300px"
+          class="align-right slide-in"
+        />
+        always encourages us as we start out on a project by saying to us.
+        "Don't get discouraged." God wants us to be encouraged, not discouraged.
+        When discouragement or condemnation tries to overtake you, examine your
+        thought life. What kind of thoughts have you been thinking? Have they
+        sounded something like this?
+      </p>
+
+      <p>
+        "I'm not going to make it; this is too hard. I always fail, it has
+        always been the same, nothing ever changes. I'm sure other people don't
+        have this much trouble getting their minds renewed. I may as well give
+        up. I'm tired of trying. I pray, but it seems as if God doesn't hear.
+        <img src="2.jpg" width="300px" class="align-left slide-in" /> He
+        probably doesn't answer my prayers because He is so disappointed in the
+        way I act." If this example represents your thoughts, it is no wonder
+        you get discouraged or come under condemnation. Remember, you become
+        what you think. Think discouraging thoughts, and you'll get discouraged.
+      </p>
+
+      <p>
+        I had a rough day yesterday. Think condemning thoughts, and you'll come
+        under condemnation. Change your thinking and be set free! Instead of
+        thinking negatively, think like this: "Well, things are going a little
+        slow; but, thank God, I'm making some progress. I'm sure glad I'm on the
+        right path that will lead me to freedom.I chose wrong thinking all day
+        long. Father, forgive me, and help me to 'keep on keeping on.' I made a
+        mistake, but at least that is one mistake I won't have to make again.
+        This is a new day. You love me, Lord. Your mercy is new every morning
+      </p>
+    </div>
+
+    <script>
+      function debounce(func, wait = 20, immediate = true) {
+        var timeout;
+        return function () {
+          var context = this,
+            args = arguments;
+          var later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+          };
+          var callNow = immediate && !timeout;
+          clearTimeout(timeout);
+          timeout = setTimeout(later, wait);
+          if (callNow) func.apply(context, args);
+        };
+      }
+
+      const sliderImages = document.querySelectorAll(".slide-in");
+
+      function checkSlide(e) {
+        sliderImages.forEach((sliderImage) => {
+          const slideInAt =
+            window.scrollY + window.innerHeight - sliderImage.height / 2;
+
+          const imageBottom = sliderImage.offsetTop + sliderImage.height;
+          const isHalfShown = slideInAt > sliderImage.offsetTop;
+          const isNotScrolledPast = window.scrollY < imageBottom;
+          if (isHalfShown && isNotScrolledPast) {
+            sliderImage.classList.add("active");
+          } else {
+            sliderImage.classList.remove("active");
+          }
         });
-       }
-  
-       window.addEventListener('scroll', debounce(checkSlide));
-        </script>
-</body>
+      }
+
+      window.addEventListener("scroll", debounce(checkSlide));
+    </script>
+  </body>
 </html>
